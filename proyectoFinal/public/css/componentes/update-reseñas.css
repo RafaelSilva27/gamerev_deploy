@@ -1,0 +1,67 @@
+/* Estilos para el modal de editar reseña */
+#modal-editar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+#modal-editar .close-modal-editar {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 3rem;
+}
+
+#modal-editar .modal__header {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#modal-editar .modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modal-editar label {
+  font-size: 1rem;
+  margin-top: 10px;
+  display: block;
+  text-align: left;
+}
+
+#modal-editar input[type="text"],
+#modal-editar textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#modal-editar button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  color: #323232;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#modal-editar button[type="submit"]:hover {
+  background-color: #8c844a;
+}

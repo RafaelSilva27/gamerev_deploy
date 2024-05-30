@@ -1,0 +1,94 @@
+#modal-add-review {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c8b738;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+#modal-add-review .btn--close-modal {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem; 
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 3rem;
+}
+
+#modal-add-review .modal__header {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#modal-add-review .modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modal-add-review label {
+  font-size: 1rem;
+  margin-top: 10px;
+  display: block;
+  text-align: left;
+}
+
+#modal-add-review input[type="text"],
+#modal-add-review textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#modal-add-review select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#modal-add-review button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  color: #323232;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#modal-add-review button[type="submit"]:hover {
+  background-color: #8c844a;
+}
+
+/* Estilo para el botón de agregar nuevo género y videojuego */
+.btn-open-modal {
+  margin-top: 10px;
+  padding: 5px 10px; /* Reducir el padding para hacerlo más pequeño */
+  color: #323232; /* Color del texto */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.875rem; /* Reducir el tamaño de la fuente */
+  transition: background-color 0.3s ease;
+}
+
+.btn-open-modal:hover {
+  background-color: #8c844a; /* Color de fondo al pasar el cursor */
+}

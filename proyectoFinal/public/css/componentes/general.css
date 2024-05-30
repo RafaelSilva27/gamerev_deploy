@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  color: #323232;
+  line-height: 1;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}

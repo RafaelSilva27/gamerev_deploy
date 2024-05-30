@@ -1,0 +1,26 @@
+.nuevo-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: #FFFFFF; 
+  padding: 1rem 0;
+}
+
+.genero-btn {
+  color: #323232;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid #554c7c;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.genero-btn:hover {
+  background-color: #554c7c;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}

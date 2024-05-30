@@ -1,0 +1,93 @@
+/* Estilos para el footer */
+
+.footer {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.25rem;
+}
+
+.QYA--title {
+  margin-bottom: 1.5rem;
+  margin-top: 0.75rem;
+  margin-left: 4rem;
+}
+
+.QYA, .contactos, .logo-footer {
+  flex: 1;
+  padding: 0.625rem;
+}
+
+.QYA {
+  text-align: left;
+}
+
+.contactos {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.logo-footer img {
+  width: 8.5rem;
+  margin-top: 1.875rem;
+  margin-left: 9.375rem;
+}
+
+.contactos * {
+  width: fit-content;
+}
+
+.contacto_icon {
+  display: block;
+  width: 100%;
+  margin-top: 0.625rem;
+  text-align: right;
+}
+
+.contacto_item {
+  margin-top: 0.625rem;
+  display: flex;
+}
+
+.contacto_item img {
+  width: 1.75rem;
+  margin-right: 0.625rem;
+}
+
+.contacto_icon p {
+  margin: 0;
+  display: block;
+  text-align: right;
+}
+
+.contactos--title {
+  margin-bottom: 0.75rem;
+  margin-right: 2rem;
+  margin-top: 0.75rem;
+}
+
+.pregunta {
+  padding-left: 0.75rem;
+  margin: 0.875rem;
+}
+
+.contactos--content {
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+
+.footer {
+  font-family: 'Karla', sans-serif;
+  font-weight: 500;
+  background-color: #c5b8fd;
+}
+
+.QYA, .contactos, .logo-footer {
+  background-color: #fefbe3;
+}
+
+.QYA--title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}

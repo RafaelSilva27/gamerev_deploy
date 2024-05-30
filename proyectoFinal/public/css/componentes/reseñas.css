@@ -1,0 +1,82 @@
+/* Estilos para la sección de Reseñas */
+.reseñas-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #c5b8fd;
+}
+
+.reseñas-title {
+  font-size: 1.5rem;
+  color: #323232;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  padding-left: 1.5rem;
+}
+
+.icono-mas {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+  padding-right: 4rem;
+}
+
+#reseñas-contenedor {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-color: #c5b8fd;
+
+}
+
+/* Estilos para los comentarios de reseñas */
+
+.resena {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin: 0.625rem;
+  padding: 1rem;
+  padding-bottom: 1.5rem; /* Nuevo padding en la parte inferior */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* Color de fondo más suave */
+  width: calc(33.33% - 1.25rem); /* Ajuste de ancho */
+  box-sizing: border-box;
+  transition: box-shadow 0.3s; /* Transición suave en la sombra */
+}
+
+.resena:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.resena h3 {
+  margin-bottom: 10px; /* Espacio adicional entre el título y el contenido */
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #323232; /* Color del título */
+}
+
+.resena .usuario {
+  color: #888; /* Color de usuario más suave */
+  font-weight: 600;
+}
+
+.resena .titulo-reseña {
+  color: #323232;
+  font-weight: 600;
+}
+
+.resena .comentario-reseña {
+  font-size: 1em;
+  color: #666; /* Color de texto más suave */
+  margin-top: 1rem; /* Espacio adicional arriba del comentario */
+  margin-bottom: 1rem; /* Espacio adicional abajo del comentario */
+  line-height: 1.4; /* Espaciado entre líneas */
+}
+

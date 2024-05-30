@@ -1,0 +1,11 @@
+.iconos-acciones {
+  display: flex;
+  gap: 10px; /* Espacio entre los iconos */
+  margin-top: 10px; /* Ajustar el margen superior si es necesario */
+}
+
+.icono-borrar, .icono-editar {
+  width: 20px; /* Ajusta el tamaño del icono */
+  height: 20px; /* Ajusta el tamaño del icono */
+  cursor: pointer;
+}

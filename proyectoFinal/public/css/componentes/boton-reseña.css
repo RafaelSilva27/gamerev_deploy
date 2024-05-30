@@ -1,0 +1,15 @@
+/* Estilos para el botón "Reseñas" */
+.btn-reseñas {
+  color: #554c7c;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border: 2px solid #554c7c;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-reseñas:hover {
+  background-color: #554c7c;
+  color: #fff;
+}

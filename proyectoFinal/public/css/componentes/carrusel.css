@@ -1,0 +1,73 @@
+/* Estilos para el Carrusel novedades */
+.titulo-topVentas {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.titulo-carrusel {
+  background-color: #fdf7c6;
+  display: inline-block;
+  padding: 0.5em;
+}
+
+.carrusel {
+  width: 100%;
+  max-width: 150rem;  /* Ajustar el tamaño máximo a algo más razonable */
+  background-color: #c5b8fd;
+  margin: 1em auto;  /* Combinar margin-top y centrar automáticamente */
+  overflow: hidden;  /* No solo overflow-x */
+}
+
+.carrusel .grande {
+  width: 200%;  /* 100% por cada slide */
+  display: flex;
+  transition: transform 0.5s ease;  /* Mejor usar transform para transiciones */
+}
+
+.carrusel .slide {
+  width: 50%;  /* Cada slide ocupa la mitad del contenedor grande */
+  background-color: #fdf7c6;
+  min-height: 31.25em;
+  padding: 2em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  /* Alinea los hijos en columna */
+  box-sizing: border-box;  /* Incluye padding y border en el tamaño total */
+}
+
+.carrusel .titulo {
+  margin-top: 1em;
+  color: #323232;
+  font-size: 1.5em;  /* Tamaño más razonable */
+  text-align: center;
+}
+
+.carrusel .imgCarrusel {
+  width: 65%;  /* Asegura que la imagen ocupe un buen espacio del contenedor */
+  height: auto;
+  max-height: 25em;
+}
+
+.carrusel .puntos {
+  width: 100%;
+  background-color: #c5b8fd;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+}
+
+.carrusel .punto {
+  width: 1em;  /* Tamaño más pequeño */
+  height: 1em;
+  background-color: #554c7c;
+  margin: 0.5em;  /* Espacio reducido */  
+  cursor: pointer;  /* Indicar que son interactivos */
+}
+
+.carrusel .punto.activo {
+  background-color: #332d4a;
+}

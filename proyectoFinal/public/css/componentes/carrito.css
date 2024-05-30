@@ -1,0 +1,64 @@
+/* Estilos para la ventana emergente del carrito */
+.carrito-overlay {
+  position: fixed;
+  top: 5.2rem;
+  right: 1rem;
+  z-index: 1000;
+  transform: translateX(-12.5rem);
+}
+
+.carrito-content {
+  background-color: #c8b738;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  max-width: 20rem;
+  overflow-y: auto;
+  max-height: 80vh; 
+}
+
+.carrito-contenedor {
+  margin-top: 1rem;
+}
+
+.producto {
+  border-bottom: 1px solid #554c7c;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.producto:last-child {
+  border-bottom: none;
+}
+
+.producto span {
+  font-size: 1em;
+}
+
+.cantidad {
+  margin-left: auto;
+}
+
+.cantidad button {
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #554c7c;
+  border-radius: 3px;
+  background-color: #fefbe3;
+  color: #554c7c;
+  cursor: pointer;
+}
+
+.btn-menos {
+  width: 15px;
+}
+
+.btn-mas {
+  width: 15px;
+}
+
+.btn-borrar {
+  width: 15px;
+}
