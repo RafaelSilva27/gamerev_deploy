@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="{{ asset('css/componentes/menu.css') }}"> 
   <link rel="stylesheet" href="{{ asset('css/componentes/carrito.css') }}"> 
   <link rel="stylesheet" href="{{ asset('css/componentes/mensaje.css') }}"> 
+  <link rel="stylesheet" href="{{ asset('css/componentes/media.css') }}"> 
 
   <!-- js -->
   <script src="{{ asset('js/componentes/carrusel.js') }}" defer></script>
@@ -242,7 +243,6 @@
   </div>
 
 
-  <div id="overlay-menu" class="overlay-menu"></div>
   <div class="overlay hidden"></div>
 
   <!-- Registro -->

@@ -1,5 +1,23 @@
-/* Estilos para el login */
+/* // Notas:  
+// 1. .modal es el contenedor del modal que se centra en la pantalla y tiene un fondo amarillo claro.
+// 2. .modal__header es el título del modal que tiene un margen inferior de 3rem y una altura de línea de 1.5.
+// 3. .modal__form es el formulario del modal que se muestra como un contenedor grid con dos columnas y un gap de 1.5rem.
+// 4. .modal__form input es cada uno de los campos de texto del formulario que tiene un padding de 1rem 1.5rem y un borde de 1px de color gris claro.
+// 5. .modal__form button es el botón de envío del formulario que se coloca en la segunda columna y tiene un margen superior de 1rem.
+// 6. .btn--close-modal es el botón de cierre del modal que se coloca en la esquina superior derecha y no tiene borde ni fondo, y que tiene una fuente de 3rem.
+// 7. .btn-login es el botón de inicio de sesión que tiene un padding de 1.2rem 2rem y una transición suave al cambiar el fondo.
+// 8. .overlay es el fondo oscuro que se muestra detrás del modal y ocupa toda la pantalla.
+// 9. .overlay.hidden es el estado oculto del fondo oscuro que no se muestra.
+// 10. .register-text es el texto de registro que se muestra debajo del formulario de inicio de sesión y tiene un tamaño de fuente de 0.9rem.
+// 11. .register-text a es el enlace de registro que tiene un color de texto de #554c7c y no tiene subrayado, pero lo adquiere al pasar el cursor por encima.
+// 12. .btn--logout es el botón de cierre de sesión que se coloca en la esquina inferior derecha.
+// 13. .modal-register es el contenedor del modal de registro que se centra en la pantalla y tiene un fondo amarillo claro.
+// 14. .modal__form-register es el formulario del modal de registro que se muestra como un contenedor grid con dos columnas y un gap de 1.5rem.
+// 15. .modal__form-register label es cada una de las etiquetas del formulario de registro que tiene un tamaño de fuente de 1.2rem.
+// 16. .modal__form-register input[type="text"] y .modal__form-register input[type="password"] son los campos de texto y contraseña del formulario de registro que tienen un padding de 1rem 1.5rem y un borde de 1px de color gris claro.
+// 17. .btn-register es el botón de registro que tiene un padding de 1.2rem 2rem y una transición suave al cambiar el fondo, y que ocupa las dos columnas. */
 
+/* Estilos para el login */
 .modal {
   position: fixed;
   top: 50%;
@@ -76,7 +94,8 @@
 }
 
 .btn-login:hover {
-  background-color: #8c844a; 
+  background-color: #70671f; 
+  color: #fff;
 }
 
 .register-text {
@@ -100,8 +119,7 @@
   right: 3rem;
 }
 
-/* Estilos para el modal de registro */
-
+/* Estilos para el registro */
 .modal-register {
   position: fixed;
   top: 50%;
@@ -144,7 +162,8 @@
 }
 
 .btn-register:hover {
-  background-color: #8c844a; 
+  background-color: #70671f; 
+  color: #fff; 
 }
 
 

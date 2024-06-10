@@ -1,0 +1,69 @@
+/* // Notas: 
+// 1. .modal-warning es el contenedor del modal de advertencia que se muestra con una posición fija, centrada en la pantalla, con un padding de 1em, un radio de borde de 5px y una sombra de 0 2px 0.625rem rgba(0, 0, 0, 0.1). También tiene un z-index de 1000 para asegurarse de que se muestre encima de otros elementos y un fondo de color #c8b738. 
+// 2. .modal-warning.hidden es una clase que se utiliza para ocultar el modal de advertencia, estableciendo su display en none. 
+// 3. .modal-warning .modal-content es el contenido del modal de advertencia que se muestra con un display de flex, un flex-direction de column y un align-items de center para centrar el contenido verticalmente. 
+// 4. .modal-warning .modal-content .close es el botón de cierre del modal que se muestra en la esquina superior derecha del contenido, con un cursor de puntero. 
+// 5. .modal-warning .modal-content p son los párrafos dentro del contenido del modal de advertencia, que tienen un margen de 1.5em en la parte superior e inferior. 
+// 6. .modal-warning .modal-content button es el botón dentro del contenido del modal de advertencia, que tiene un margen superior de 1.25rem, un padding de 0.625rem 1.25rem, una transición suave al cambiar el fondo de color, un color de texto de #323232, un borde transparente y un cursor de puntero. 
+// 7. .modal-warning .modal-content button es el estado de hover del botón dentro del contenido del modal de advertencia, que cambia el fondo de color a #70671f y el color de texto a blanco al pasar el ratón. 
+// 8. .close es el botón de cierre del modal que se muestra como un icono en la esquina superior derecha del modal, con un cursor de puntero y sin borde ni fondo. */
+
+/* Estilos para el modal de advertencia */
+.modal-warning {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: #c8b738;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0 2px 0.625rem rgba(0, 0, 0, 0.1);
+}
+
+.modal-warning.hidden {
+  display: none;
+}
+
+.modal-warning .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-warning .modal-content .close {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.modal-warning .modal-content p {
+  margin: 1.5em 0;
+}
+
+.modal-warning .modal-content button {
+  margin-top: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  transition: background-color 0.3s ease;
+  color: #323232;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-warning .modal-content button:hover {
+  background-color: #70671f;
+  color: white;
+}
+
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+}

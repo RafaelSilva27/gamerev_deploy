@@ -1,3 +1,13 @@
+/* // Notas:  
+// 1. .busqueda es el contenedor de la barra de búsqueda que se muestra como un contenedor flexible con elementos centrados verticalmente.
+// 2. .nav_busqueda es el elemento de navegación de la barra de búsqueda que tiene un cursor de puntero cuando se pasa por encima.
+// 3. .input-busqueda es el campo de texto de la barra de búsqueda que tiene un padding de 0.5em 1em, sin borde y un radio de borde de 3px, y un margen derecho de 0.5em.
+// 4. .btn-busqueda es el botón de búsqueda que tiene un padding de 0.5em 1em, un fondo de color #554c7c, un color de texto blanco (#fff), sin borde y un radio de borde de 3px, y un cursor de puntero cuando se pasa por encima.
+// 5. El botón de búsqueda también tiene una transición suave al cambiar el fondo cuando se pasa el cursor por encima.
+// 6. .btn-busqueda:hover es el estado de hover del botón de búsqueda que cambia el fondo a #332d4a cuando se pasa el cursor por encima.
+// 7. .hidden es la clase que se utiliza para ocultar elementos, que se hace mediante la propiedad display: none. */
+
+/* Estilos para el boton de busqueda */
 .busqueda {
   display: flex;
   align-items: center;

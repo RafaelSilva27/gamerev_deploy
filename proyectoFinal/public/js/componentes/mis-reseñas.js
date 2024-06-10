@@ -66,24 +66,18 @@ document.addEventListener('DOMContentLoaded', function () {
         titulo: titulo,
         comentario: comentario
       })
-      .then(response => {
-        console.log('Reseña actualizada:', response);
-        // Volver a cargar las reseñas después de actualizar
-        cargarReseñas();
-        ocultarModalEditar();
-      })
-      .catch(error => {
-        console.error('Error al actualizar la reseña:', error);
-      });
+        .then(response => {
+          // Volver a cargar las reseñas después de actualizar
+          cargarReseñas();
+          ocultarModalEditar();
+        });
     } else {
-      console.error('El usuario no está autenticado');
       mostrarModalError();
     }
   });
 
   // Función para borrar una reseña
   function borrarReseña(resenaId) {
-    console.log(`Borrando reseña con id: ${resenaId}`);
 
     // Obtener el token de acceso
     const token = localStorage.getItem('token');
@@ -94,22 +88,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
       axios.delete(`/api/resenas/${resenaId}`)
         .then(response => {
-          console.log('Reseña borrada:', response);
           // Volver a cargar las reseñas después de borrar
           cargarReseñas();
-        })
-        .catch(error => {
-          console.error('Error al borrar la reseña:', error);
         });
     } else {
-      console.error('El usuario no está autenticado');
       mostrarModalError();
     }
   }
 
   // Función para obtener y mostrar las reseñas del usuario logueado
   function cargarReseñas() {
-    console.log('Cargando reseñas...');
 
     // Obtener el token de acceso y el userId almacenado en localStorage
     const token = localStorage.getItem('token');
@@ -121,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
       axios.get(`/api/resenas?user_id=${userId}`)
         .then(response => {
-          console.log('Respuesta de la API:', response);
           const reseñas = response.data.data; // Asegúrate de que la estructura de la respuesta sea correcta
           reseñasContenedor.innerHTML = ''; // Limpiar cualquier contenido existente
 
@@ -144,27 +131,23 @@ document.addEventListener('DOMContentLoaded', function () {
           // Añadir eventos de clic a los botones de borrar
           const iconosBorrar = document.querySelectorAll('.icono-borrar');
           iconosBorrar.forEach(icono => {
-              icono.addEventListener('click', function () {
-                  const resenaId = this.getAttribute('data-id');
-                  borrarReseña(resenaId);
-              });
+            icono.addEventListener('click', function () {
+              const resenaId = this.getAttribute('data-id');
+              borrarReseña(resenaId);
+            });
           });
 
           // Añadir eventos de clic a los botones de editar
           const iconosEditar = document.querySelectorAll('.icono-editar');
           iconosEditar.forEach(icono => {
-              icono.addEventListener('click', function () {
-                  const resenaId = this.getAttribute('data-id');
-                  const resena = reseñas.find(r => r.id == resenaId);
-                  mostrarModalEditar(resena);
-              });
+            icono.addEventListener('click', function () {
+              const resenaId = this.getAttribute('data-id');
+              const resena = reseñas.find(r => r.id == resenaId);
+              mostrarModalEditar(resena);
+            });
           });
-                  })
-        .catch(error => {
-          console.error('Error al obtener las reseñas:', error);
         });
     } else {
-      console.error('El usuario no está autenticado');
       mostrarModalError();
     }
   }

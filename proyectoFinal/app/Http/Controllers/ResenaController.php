@@ -14,7 +14,7 @@ class ResenaController extends Controller
      */
     public function index(Request $request):JsonResource
     {
-        $userId = $request->query('user_id'); // Obtener el user_id de la solicitud
+        $userId = $request->query('user_id'); 
 
         if ($userId) {
             $resenas = Resena::with('user', 'videojuego')->where('user_id', $userId)->get();

@@ -1,12 +1,22 @@
+/* // Notas:  
+// 1. #modal-editar es el contenedor del modal de editar reseña que se muestra con una posición fija, centrada en la pantalla, con un padding de 1.25rem, un radio de borde de 0.625rem, una sombra de 0 0 0.625rem rgba(0, 0, 0, 0.2) y un z-index de 1000 para asegurarse de que se muestre encima de otros elementos.
+// 2. .close-modal-editar es el botón de cierre del modal que se muestra con una posición absoluta en la esquina superior derecha, un cursor de puntero, un borde y fondo transparentes, y un tamaño de fuente de 3rem.
+// 3. .modal__header es el título del modal que se muestra con un tamaño de fuente de 1.5rem y un margen inferior de 1.25rem.
+// 4. .modal__form es el formulario del modal que se muestra con un display de flex, un flex-direction de column, y un align-items de center.
+// 5. label es el elemento de etiqueta del formulario que se muestra con un tamaño de fuente de 1rem, un margen superior de 0.625rem, y un texto alineado a la izquierda.
+// 6. input[type="text"] y textarea son los campos de texto y área de texto del formulario que se muestran con un ancho del 100%, un padding de 8px, un margen superior de 5px, un borde de 1px solid #ddd, y un radio de borde de 5px.
+// 7. button[type="submit"] es el botón de envío del formulario que se muestra con un margen superior de 1.25rem, un padding de 0.625rem 1.25rem, una transición suave al cambiar el fondo de color, un color de texto de #323232, un borde transparente, y un cursor de puntero.
+// 8. button[type="submit"]:hover es el estado de hover del botón de envío que cambia el fondo de color a #70671f y las letras a #fff al pasar el ratón. */
+
 /* Estilos para el modal de editar reseña */
 #modal-editar {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
   z-index: 1000;
   text-align: center;
 }
@@ -25,7 +35,7 @@
 
 #modal-editar .modal__header {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 #modal-editar .modal__form {
@@ -36,7 +46,7 @@
 
 #modal-editar label {
   font-size: 1rem;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   display: block;
   text-align: left;
 }
@@ -52,8 +62,8 @@
 }
 
 #modal-editar button[type="submit"] {
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 1.25rem;
+  padding: 0.625rem 1.25rem;
   transition: background-color 0.3s ease;
   color: #323232;
   border: none;
@@ -63,5 +73,6 @@
 }
 
 #modal-editar button[type="submit"]:hover {
-  background-color: #8c844a;
+  background-color: #70671f; 
+  color: #fff;
 }

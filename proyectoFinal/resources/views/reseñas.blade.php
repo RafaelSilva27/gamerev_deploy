@@ -9,22 +9,23 @@
                                         Apartado de reviews para saber la opinion de otros jugadores." />
 
   <!-- css -->
-  <link rel="stylesheet" href="{{ asset('css/componentes/general.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/header.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/nav.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/footer.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/auth.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/busqueda.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/mensaje.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/reseñas.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/añadir-reseñas.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/añadir-videojuegos.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/añadir-genero.css') }}"> 
-  <link rel="stylesheet" href="{{ asset('css/componentes/boton-misReseñas.css') }}"> 
+  <link rel="stylesheet" href="{{ asset('css/componentes/general.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/header.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/nav.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/footer.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/auth.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/busqueda.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/mensaje.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/reseñas.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/añadir-reseñas.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/añadir-videojuegos.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/añadir-genero.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/boton-misReseñas.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/modal-warning.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/componentes/media.css') }}"> 
 
   <!-- js -->
   <script src="{{ asset('js/componentes/reseñas.js') }}" defer></script>
-  <script src="{{ asset('js/componentes/auth.js') }}" defer></script>
   <script src="{{ asset('js/componentes/añadir-videojuego.js') }}" defer></script>
   <script src="{{ asset('js/componentes/añadir-genero.js') }}" defer></script>
 
@@ -64,10 +65,10 @@
     <h2 class="reseñas-title">Reseñas</h2>
     <a href="{{ url('/misReseñas') }}" class="btn-reseñas"> Mis Reseñas</a>
     <img src="img/añadir-reseña.svg" alt="añadir reseña" class="icono-mas" id="icono_mas">
-    </div>
-    <div id="reseñas-contenedor">
-      <!-- Aquí se cargarán las reseñas -->
-    </div>
+  </div>
+  <div id="reseñas-contenedor">
+    <!-- Aquí se cargarán las reseñas -->
+  </div>
 
 
 
@@ -117,117 +118,73 @@
 
   <!-- Modal para añadir una reseña -->
   <div class="modal-reseña hidden" id="modal-add-review">
-      <button class="btn--close-modal">&times;</button>
-      <h2 class="modal__header">Añadir Reseña</h2>
-      <form class="modal__form" id="form-add-review">
-          <label for="select-videojuego">Videojuego</label>
-          <select id="select-videojuego" name="videojuego_id" required></select>
-
-          <button id="btn-add-game-modal" class="btn-open-modal">Agregar Nuevo Videojuego</button>
-
-          <label for="titulo">Título</label>
-          <input type="text" id="titulo" name="titulo" required />
-
-          <label for="comentario">Comentario</label>
-          <textarea id="comentario" name="comentario" required></textarea>
-
-          <button type="submit" class="btn-submit">Añadir Reseña</button>
-      </form>
-  </div>
-
-
-  <!-- Login -->
-
-  <div class="modal hidden">
     <button class="btn--close-modal">&times;</button>
-    <h2 class="modal__header">
-      Iniciar Sesión <br />
-    </h2>
-    <form class="modal__form" name="modal__form">
-      <label>Email</label>
-      <input type="text" name="email" />
-      <label>Contraseña</label>
-      <input type="password" name="password" />
-      <button type="submit" class="btn-login">Iniciar Sesión</button>
-      <span class="register-text">¿No tienes una cuenta? <a href="#" class="open-register-modal">Registrarse</a></span>
-      <a href="#" class="btn--logout">Cerrar Sesión</a>
+    <h2 class="modal__header">Añadir Reseña</h2>
+    <form class="modal__form" id="form-add-review">
+      <label for="select-videojuego">Videojuego</label>
+      <select id="select-videojuego" name="videojuego_id" required></select>
+
+      <button id="btn-add-game-modal" class="btn-open-modal">Agregar Nuevo Videojuego</button>
+
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" name="titulo" required />
+
+      <label for="comentario">Comentario</label>
+      <textarea id="comentario" name="comentario" required></textarea>
+
+      <button type="submit" class="btn-submit">Añadir Reseña</button>
     </form>
   </div>
 
-
-
-
-  <div id="overlay-menu" class="overlay-menu"></div>
-  <div class="overlay hidden"></div>
-
-  <!-- Registro -->
-  <div class="modal-register hidden">
-    <button class="btn--close-modal btn--close-modal-register">&times;</button>
-    <h2 class="modal__header">
-      Registrarse <br />
-    </h2>
-    <form class="modal__form-register" name="modal__form-register">
-      <label>Email</label>
-      <input type="text" name="email" />
-      <label>Contraseña</label>
-      <input type="password" name="password" />
-      <label>Repetir Contraseña</label>
-      <input type="password" name="confirm-password" />
-      <button class="btn-register">Registrarse</button>
-    </form>
-  </div>
-  <div class="overlay-register hidden"></div>
-
-  <!-- Mensaje Modal -->
-  <div class="message-modal hidden">
-    <div class="message-content">
-      <button class="btn--close-message-modal">&times;</button>
-      <p class="message-text"></p>
-    </div>
-  </div>
-  <div class="overlay-message hidden"></div>
+  <div class="overlay-reseñas hidden" id="overlay-reseñas"></div>
 
   <!-- Modal para agregar nuevo videojuego -->
-<div class="modal-add-game hidden" id="modal-add-game">
+  <div class="modal-add-game hidden" id="modal-add-game">
     <button class="btn--close-modal">&times;</button>
     <h2 class="modal__header">Agregar Nuevo Videojuego</h2>
     <form class="modal__form" id="form-add-game">
-        <label for="nombre-videojuego">Nombre</label>
-        <input type="text" id="nombre-videojuego" name="nombre" required />
+      <label for="nombre-videojuego">Nombre</label>
+      <input type="text" id="nombre-videojuego" name="nombre" required />
 
-        <label for="precio-videojuego">Precio</label>
-        <input type="number" id="precio-videojuego" name="precio" required />
+      <label for="precio-videojuego">Precio</label>
+      <input type="number" id="precio-videojuego" name="precio" required />
 
-        <label for="genero-videojuego">Género</label>
-        <div id="checkbox-genero" class="checkbox-genero">
-            <!-- Opciones de género cargadas dinámicamente como checkboxes -->
-        </div>
+      <label for="genero-videojuego">Género</label>
+      <div id="checkbox-genero" class="checkbox-genero">
+        <!-- Opciones de género cargadas dinámicamente como checkboxes -->
+      </div>
 
-        <button type="button" class="btn-add-genero">Agregar Nuevo Género</button>
-        <button type="submit" class="btn-submit">Agregar Videojuego</button>
+      <button type="button" class="btn-add-genero">Agregar Nuevo Género</button>
+      <button type="submit" class="btn-submit">Agregar Videojuego</button>
     </form>
-</div>
+  </div>
 
-<!-- Modal para agregar nuevo género -->
-<div class="modal-add-genero hidden" id="modal-add-genero">
+  <div class="overlay-videojuegos hidden" id="overlay-videojuegos"></div>
+
+  <!-- Modal para agregar nuevo género -->
+  <div class="modal-add-genero hidden" id="modal-add-genero">
     <button class="btn--close-modal">&times;</button>
     <h2 class="modal__header">Agregar Nuevo Género</h2>
     <form class="modal__form" id="form-add-genero">
-        <label for="nombre-genero">Nombre del Género</label>
-        <input type="text" id="nombre-genero" name="nombre" required />
+      <label for="nombre-genero">Nombre del Género</label>
+      <input type="text" id="nombre-genero" name="nombre" required />
 
-        <button type="submit" class="btn-submit">Agregar Género</button>
+      <button type="submit" class="btn-submit">Agregar Género</button>
     </form>
-</div>
+  </div>
 
-  <!-- Modal de advertencia -->
-<div id="modal-warning" class="modal-warning hidden">
+  <div class="overlay-generos hidden" id="overlay-generos"></div>
+
+
+  <!-- Modal de advertencia de reseña-->
+  <div id="modal-warning" class="modal-warning hidden">
     <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Debes iniciar sesión para acceder a esta página.</p>
-        <button id="btn-login">Iniciar Sesión</button>
+      <span class="close" id="close-warning-modal">&times;</span>
+      <p>Debes iniciar sesión para acceder a esta página.</p>
+      <button id="btn-login">Iniciar Sesión</button>
     </div>
-</div>
+  </div>
+
 
 </body>
 

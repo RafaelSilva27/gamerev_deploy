@@ -1,3 +1,8 @@
+/* // Notas:  
+// 1. .nav es el contenedor de la navegación que se muestra como un contenedor flexible con elementos centrados horizontalmente y verticalmente, con un alto de 5rem, un ancho del 100%, un padding de 0 3rem y un z-index de 100 para asegurarse de que se muestre encima de otros elementos.
+// 2. La navegación también tiene un borde inferior de 2px solid #7165a5 para separarla del contenido principal. */
+
+/* Estilos para el nav */
 .nav {
   display: flex;
   justify-content: space-between;

@@ -1,6 +1,13 @@
+/* // Notas:  
+// 1. .btn-reseñas es el botón "Mis Reseñas" que tiene un color de texto de #554c7c, un peso de fuente bold, sin subrayado y un padding de 0.5em 1em.
+// 2. El botón también tiene un borde de 2px de color #554c7c y un radio de borde de 5px, lo que le da una apariencia de botón redondeado.
+// 3. El botón tiene una transición suave al cambiar el fondo y el color de texto cuando se pasa el cursor por encima.
+// 4. .btn-reseñas:hover es el estado de hover del botón que cambia el fondo a #554c7c y el color de texto a blanco (#fff) cuando se pasa el cursor por encima. */
+
 /* Estilos para el botón "Mis Reseñas" */
 .btn-reseñas {
   color: #554c7c;
+  background-color: #fff;
   font-weight: bold;
   text-decoration: none;
   padding: 0.5em 1em;

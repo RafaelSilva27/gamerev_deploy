@@ -26,7 +26,30 @@ Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
 
-Route::resource('/videojuegos', VideojuegoController::class);
-Route::resource('/generos', GeneroController::class);
-Route::resource('/resenas', ResenaController::class);
+// Rutas para videojuegos
+Route::get('/videojuegos', [VideojuegoController::class, 'index']);
+Route::get('/videojuegos/{videojuego}', [VideojuegoController::class, 'show']);
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/videojuegos', [VideojuegoController::class, 'store']);
+    Route::put('/videojuegos/{videojuego}', [VideojuegoController::class, 'update']);
+    Route::delete('/videojuegos/{videojuego}', [VideojuegoController::class, 'destroy']);
+});
+
+// Rutas para géneros
+Route::get('/generos', [GeneroController::class, 'index']);
+Route::get('/generos/{genero}', [GeneroController::class, 'show']);
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/generos', [GeneroController::class, 'store']);
+    Route::put('/generos/{genero}', [GeneroController::class, 'update']);
+    Route::delete('/generos/{genero}', [GeneroController::class, 'destroy']);
+});
+
+// Rutas para reseñas
+Route::get('/resenas', [ResenaController::class, 'index']);
+Route::get('/resenas/{resena}', [ResenaController::class, 'show']);
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/resenas', [ResenaController::class, 'store']);
+    Route::put('/resenas/{resena}', [ResenaController::class, 'update']);
+    Route::delete('/resenas/{resena}', [ResenaController::class, 'destroy']);
+});
 

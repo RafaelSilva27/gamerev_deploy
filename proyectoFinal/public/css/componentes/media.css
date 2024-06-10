@@ -1,0 +1,243 @@
+/* // Notas:
+// 1. Los estilos para dispositivos con una anchura máxima de 768px se aplican al footer y al header.
+// 2. En el footer, se cambia la disposición a columnas y se centran los elementos.
+// 3. Se ajusta el padding y el margen de los elementos del footer para una mejor visualización en dispositivos pequeños.
+// 4. En el header, se ajusta el padding y el ancho de los elementos para dispositivos pequeños.
+// 5. Se oculta el icono de búsqueda en dispositivos con una anchura máxima de 360px.
+// 6. Se ajustan los estilos para la autenticación en dispositivos con una anchura máxima de 360px.
+// 7. Se reduce el tamaño del modal y se ajustan los estilos de los elementos dentro del mismo para una mejor visualización en dispositivos pequeños.
+// 8. Se reducen los márgenes y el padding de los elementos dentro del modal en dispositivos con una anchura máxima de 360px.
+// 9. Se ajustan los estilos del formulario de registro para dispositivos con una anchura máxima de 360px. */
+
+/* Media para 768px */
+
+/* footer */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .QYA, .contactos, .logo-footer {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .QYA--title, .contactos--title {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .logo-footer img {
+    margin: 0 auto;
+  }
+
+  .contactos {
+    align-items: center;
+  }
+
+  .contacto_icon, .contacto_icon p {
+    text-align: center;
+  }
+
+  .contacto_item {
+    justify-content: center;
+  }
+
+  .contactos--content {
+    margin-right: 0;
+  }
+}
+
+/* header */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 4rem;
+    margin-top: 0.625rem;
+  }
+
+  .nav_menu, .carrito, .user {
+    width: 2rem;
+    margin: 0;
+  }
+
+  .nav_busqueda{
+    display: none;
+  }
+
+  .nuevo-nav {
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
+
+  .genero-btn {
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 0 1rem;
+  }
+
+  .btn-reseñas {
+    padding: 0.25em 0.5em;
+    margin: 0.25rem 0;
+  }
+}
+
+/* Media para 360px */
+
+/* footer */
+@media (max-width: 360px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .QYA, .contactos, .logo-footer {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .QYA--title, .contactos--title {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .logo-footer img {
+    margin: 0 auto;
+  }
+
+  .contactos {
+    align-items: center;
+  }
+
+  .contacto_icon, .contacto_icon p {
+    text-align: center;
+  }
+
+  .contacto_item {
+    justify-content: center;
+  }
+
+  .contactos--content {
+    margin-right: 0;
+  }
+}
+
+/* header */
+@media (max-width: 360px) {
+  .header {
+    padding: 0 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 4rem;
+    margin-top: 0.625rem;
+  }
+
+  .nav_menu, .user {
+    width: 2rem;
+    margin: 0;
+  }
+
+  .nav_busqueda, .carrito{
+    display: none;
+  }
+
+  .nuevo-nav {
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
+
+  .genero-btn {
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0;
+  }
+
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 0 1rem;
+  }
+
+  .btn-reseñas {
+    padding: 0.25em 0.5em;
+    margin: 0.25rem 0;
+  }
+}
+
+/* auth */
+@media (max-width: 360px) {
+  .modal {
+    max-width: calc(100% - 2rem); 
+    padding: 2rem; 
+  }
+
+  .modal__header {
+    margin-bottom: 1.5rem; 
+  }
+
+  .modal__form {
+    margin: 0;
+    grid-template-columns: 1fr; 
+    gap: 1rem; 
+  }
+
+  .modal__form input {
+    padding: 0.75rem; 
+  }
+
+  .modal__form button {
+    margin-top: 0.5rem; 
+  }
+
+  .btn--close-modal {
+    font-size: 2rem; 
+    top: 0.25rem; 
+    right: 0.75rem; 
+  }
+
+  .btn-login {
+    padding: 1rem 1.5rem; 
+  }
+
+  .register-text {
+    margin-top: 0.5rem; 
+    font-size: 0.8rem; 
+  }
+
+  .btn--logout {
+    bottom: 2rem; 
+    right: 2rem; 
+  }
+
+  /* Estilos para el registro */
+  .modal-register {
+    max-width: calc(100% - 2rem); 
+    padding: 2rem; 
+  }
+
+  .modal__form-register input[type="text"],
+  .modal__form-register input[type="password"] {
+    padding: 0.75rem; 
+  }
+
+  .btn-register {
+    padding: 1rem 1.5rem; 
+  }
+}

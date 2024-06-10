@@ -39,7 +39,6 @@ class VideojuegoController extends Controller
         $videojuego->save();
 
         if ($request->has('genero')) {
-            // Adjuntar los géneros seleccionados al videojuego
             $videojuego->genero()->attach($request->genero);
         }
 

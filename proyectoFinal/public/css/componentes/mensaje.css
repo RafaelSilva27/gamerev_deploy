@@ -1,3 +1,9 @@
+/* // Notas:  
+// 1. .message-modal es el contenedor del mensaje modal que se muestra en una posición fija en el centro de la pantalla. Se ha cambiado el color de fondo a #c8b738.
+// 2. .overlay-message es el overlay que se muestra detrás del mensaje modal, que se extiende por toda la pantalla con un fondo semitransparente rgba(0, 0, 0, 0.5).
+// 3. .btn--close-message-modal es el botón de cierre del mensaje modal que se muestra en la esquina superior derecha del contenedor.
+// 4. .hidden es una clase que se utiliza para ocultar elementos, en este caso, se establece que los elementos con esta clase no se muestren en la pantalla. */
+
 /* Estilos para el mensaje modal */
 .message-modal {
   position: fixed;
@@ -6,8 +12,8 @@
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 3.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 0.625rem rgba(0, 0, 0, 0.1);
   z-index: 1000;
   background-color: #c8b738;
 }

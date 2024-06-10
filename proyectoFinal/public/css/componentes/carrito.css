@@ -1,3 +1,15 @@
+/* // Notas:  
+// 1. .carrito-overlay es el contenedor de la ventana emergente del carrito que se muestra en una posición fija en la parte superior derecha de la pantalla, con un desplazamiento horizontal de -12.5rem para que se muestre fuera de la pantalla.
+// 2. .carrito-content es el contenido de la ventana emergente del carrito que tiene un fondo de color #c8b738, un padding de 1rem, un radio de borde de 5px, una sombra de 1.25rem y un ancho máximo de 20rem.
+// 3. .carrito-contenedor es el contenedor de los productos del carrito que tiene un margen superior de 1rem.
+// 4. .producto es cada uno de los productos del carrito que tiene un borde inferior de 1px de color #554c7c, un padding de 0.5rem 0, y se muestra como un contenedor flexible con elementos centrados horizontalmente y verticalmente.
+// 5. .producto:last-child es el último producto del carrito que no tiene borde inferior.
+// 6. .producto span es cada una de las etiquetas de los productos que tiene un tamaño de fuente de 1em.
+// 7. .cantidad es el contenedor de la cantidad de cada producto que se muestra en la parte derecha del producto.
+// 8. .cantidad button son los botones de incrementar y decrementar la cantidad de cada producto que tienen un margen de 0 0.25rem, un padding de 0.25rem 0.5rem, un borde de 1px de color #554c7c, un radio de borde de 3px, un fondo de color #fefbe3 y un color de texto de #554c7c.
+// 9. .btn-menos, .btn-mas y .btn-borrar son los botones de decrementar, incrementar y borrar cada producto que tienen un ancho de 0.938rem. */
+
+
 /* Estilos para la ventana emergente del carrito */
 .carrito-overlay {
   position: fixed;
@@ -11,7 +23,7 @@
   background-color: #c8b738;
   padding: 1rem;
   border-radius: 5px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2);
   max-width: 20rem;
   overflow-y: auto;
   max-height: 80vh; 
@@ -52,13 +64,13 @@
 }
 
 .btn-menos {
-  width: 15px;
+  width: 0.938rem;
 }
 
 .btn-mas {
-  width: 15px;
+  width: 0.938rem;
 }
 
 .btn-borrar {
-  width: 15px;
+  width: 0.938rem;
 }

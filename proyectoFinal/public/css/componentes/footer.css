@@ -1,5 +1,23 @@
-/* Estilos para el footer */
+/* // Notas:  
+// 1. .footer es el contenedor del footer que se muestra como un contenedor flexible con elementos centrados horizontalmente y tiene un padding de 1.25rem.
+// 2. .QYA--title es el título de la sección "¿Qué es Acción?" que tiene un margen inferior de 1.5rem, un margen superior de 0.75rem y un margen izquierdo de 4rem.
+// 3. .QYA, .contactos y .logo-footer son los contenedores de las secciones del footer que tienen un ancho flexible, un padding de 0.625rem y se muestran como contenedores flexibles.
+// 4. .QYA se muestra con texto alineado a la izquierda.
+// 5. .contactos se muestra como un contenedor flexible con elementos centrados verticalmente y tiene un ancho flexible.
+// 6. .logo-footer img es la imagen del logo en el footer que tiene un ancho de 8.5rem, un margen superior de 1.875rem y un margen izquierdo de 9.375rem.
+// 7. .contactos * tiene un ancho que se ajusta al contenido.
+// 8. .contacto_icon es el contenedor de los iconos de contacto que se muestra como un bloque con un ancho del 100%, un margen superior de 0.625rem y texto alineado a la derecha.
+// 9. .contacto_item es el contenedor de cada item de contacto que se muestra como un contenedor flexible con un margen superior de 0.625rem.
+// 10. .contacto_item img es la imagen de cada item de contacto que tiene un ancho de 1.75rem y un margen derecho de 0.625rem.
+// 11. .contacto_icon p es el párrafo de texto de cada item de contacto que se muestra como un bloque con texto alineado a la derecha y sin margen.
+// 12. .contactos--title es el título de la sección de contactos que tiene un margen inferior de 0.75rem, un margen derecho de 2rem y un margen superior de 0.75rem.
+// 13. .pregunta es el contenedor de la pregunta frecuente que tiene un padding izquierdo de 0.75rem y un margen de 0.875rem.
+// 14. .contactos--content es el contenedor del contenido de la sección de contactos que tiene un margen inferior de 1rem y un margen derecho de 2rem.
+// 15. .footer tiene una familia de fuente "Karla" con un peso de fuente de 500 y un fondo de color #c5b8fd.
+// 16. .QYA, .contactos y .logo-footer tienen un fondo de color #fefbe3.
+// 17. .QYA--title tiene una familia de fuente "Lato" con un peso de fuente de 700. */
 
+/* Estilos para el footer */
 .footer {
   list-style: none;
   display: flex;

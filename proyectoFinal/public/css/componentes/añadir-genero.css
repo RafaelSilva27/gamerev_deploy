@@ -1,3 +1,13 @@
+/* // Notas:
+// 1. #modal-add-genero es el contenedor del modal que se centra en la pantalla y tiene un fondo amarillo claro.
+// 2. .btn--close-modal es el botón de cierre del modal que se coloca en la esquina superior derecha y no tiene borde ni fondo.
+// 3. .modal__header es el título del modal que tiene un tamaño de fuente de 1.5rem y un margen inferior de 1.25rem.
+// 4. .modal__form es el formulario del modal que se muestra como un contenedor flexible con elementos en una columna y centrados horizontalmente.
+// 5. label es la etiqueta del formulario que tiene un tamaño de fuente de 1rem, un margen superior de 0.625rem y se alinea a la izquierda.
+// 6. input[type="text"] es el campo de texto del formulario que ocupa todo el ancho disponible, tiene un padding de 8px y un borde de 1px de color gris claro.
+// 7. button[type="submit"] es el botón de envío del formulario que tiene un margen superior de 1.25rem, un padding de 0.625rem 1.25rem y una transición suave al cambiar el fondo.
+// 8. button[type="submit"]:hover es el estado de hover del botón de envío que cambia el fondo a un color marrón claro. */
+
 /* Estilos para el modal de agregar nuevo género */
 #modal-add-genero {
   position: fixed;
@@ -5,11 +15,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #c8b738;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  max-width: 400px;
+  max-width: 25rem;
   width: 90%;
   text-align: center;
 }
@@ -28,7 +38,7 @@
 
 #modal-add-genero .modal__header {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 #modal-add-genero .modal__form {
@@ -39,7 +49,7 @@
 
 #modal-add-genero label {
   font-size: 1rem;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   display: block;
   text-align: left;
 }
@@ -54,8 +64,8 @@
 }
 
 #modal-add-genero button[type="submit"] {
-  margin-top: 20px;
-  padding: 10px 20px;
+  margin-top: 1.25rem;
+  padding: 0.625rem 1.25rem;
   transition: background-color 0.3s ease;
   color: #323232;
   border: none;
@@ -65,5 +75,21 @@
 }
 
 #modal-add-genero button[type="submit"]:hover {
-  background-color: #8c844a;
+  background-color: #70671f; 
+  color: #fff;
 }
+
+.overlay-generos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 999; 
+}
+
+.overlay-generos.hidden {
+  display: none; 
+}
+

@@ -18,8 +18,7 @@
   <link rel="stylesheet" href="{{ asset('css/componentes/mensaje-misReseñas.css') }}"> 
   <link rel="stylesheet" href="{{ asset('css/componentes/mis-reseñas.css') }}"> 
   <link rel="stylesheet" href="{{ asset('css/componentes/update-reseñas.css') }}"> 
-
-
+  <link rel="stylesheet" href="{{ asset('css/componentes/media.css') }}"> 
 
   <!-- js -->
   <script src="{{ asset('js/componentes/mis-reseñas.js') }}" defer></script>

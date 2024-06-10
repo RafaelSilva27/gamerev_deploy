@@ -1,9 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Selección de elementos del DOM
   const modal = document.querySelector('.modal');
   const overlay = document.querySelector('.overlay');
   const btnCloseModal = document.querySelector('.btn--close-modal');
   const btnOpenModal = document.querySelectorAll('.btn--show-modal');
+  const loginModal = document.querySelector('.modal');
+  const registerModal = document.querySelector('.modal-register');
+  const registerOverlay = document.querySelector('.overlay-register');
+  const openRegisterModalLinks = document.querySelectorAll('.open-register-modal');
+  const closeModalButtons = document.querySelectorAll('.btn--close-modal, .btn--close-modal-register');
+  const messageModal = document.querySelector('.message-modal');
+  const messageText = document.querySelector('.message-text');
+  const overlayMessage = document.querySelector('.overlay-message');
+  const logoutButton = document.querySelector('.btn--logout');
+  const loginForm = document.querySelector('.modal__form');
+  const registerForm = document.querySelector('.modal__form-register');
 
+  // Funciones para abrir y cerrar el modal de inicio de sesión
   const openModal = function () {
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
@@ -14,27 +27,21 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.classList.add('hidden');
   };
 
+  // Event listeners para abrir y cerrar el modal de inicio de sesión
   btnCloseModal.addEventListener('click', closeModal);
   overlay.addEventListener('click', closeModal);
 
+  // Cerrar el modal con la tecla "Escape"
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
       closeModal();
     }
   });
 
+  // Abrir el modal de inicio de sesión al hacer clic en los botones correspondientes
   btnOpenModal.forEach((btn) => btn.addEventListener('click', openModal));
 
-  const loginModal = document.querySelector('.modal');
-  const registerModal = document.querySelector('.modal-register');
-  const registerOverlay = document.querySelector('.overlay-register');
-  const openRegisterModalLinks = document.querySelectorAll('.open-register-modal');
-  const closeModalButtons = document.querySelectorAll('.btn--close-modal, .btn--close-modal-register');
-  const messageModal = document.querySelector('.message-modal');
-  const messageText = document.querySelector('.message-text');
-  const overlayMessage = document.querySelector('.overlay-message');
-  const logoutButton = document.querySelector('.btn--logout');
-
+  // Funciones para abrir y cerrar el modal de registro
   function openRegisterModal() {
     loginModal.classList.add('hidden');
     registerModal.classList.remove('hidden');
@@ -44,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function closeRegisterModal() {
     registerModal.classList.add('hidden');
     registerOverlay.classList.add('hidden');
+    overlay.classList.add('hidden');
   }
 
   function closeLoginModal() {
@@ -51,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.classList.add('hidden');
   }
 
+  // Abrir el modal de registro al hacer clic en los enlaces correspondientes
   openRegisterModalLinks.forEach((link) => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
@@ -58,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Cerrar los modales de inicio de sesión y registro
   closeModalButtons.forEach((button) => {
     button.addEventListener('click', function () {
       closeRegisterModal();
@@ -65,22 +75,32 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  function openMessageModal(message) {
-    messageText.textContent = message;
-    messageModal.classList.remove('hidden');
-    overlayMessage.classList.remove('hidden');
-  }
+  // Función para abrir y cerrar el modal de mensajes
+function openMessageModal(message) {
+  messageText.textContent = message;
+  messageModal.classList.remove('hidden');
+  overlayMessage.classList.remove('hidden');
+}
 
-  function closeMessageModal() {
-    messageModal.classList.add('hidden');
-    overlayMessage.classList.add('hidden');
-  }
+function closeMessageModal() {
+  messageModal.classList.add('hidden');
+  overlayMessage.classList.add('hidden');
+}
 
-  overlayMessage.addEventListener('click', closeMessageModal);
+// Cerrar el modal de mensajes al hacer clic en el overlay
+overlayMessage.addEventListener('click', closeMessageModal);
 
-  const loginForm = document.querySelector('.modal__form');
-  const registerForm = document.querySelector('.modal__form-register');
+// Cerrar el modal de mensajes al hacer clic en el botón de cierre del mensaje
+document.querySelector('.btn--close-message-modal').addEventListener('click', closeMessageModal);
 
+// Cerrar el modal de mensajes al hacer clic en el overlay del mensaje
+overlayMessage.addEventListener('click', closeMessageModal);
+
+// Cerrar el modal de mensajes al hacer clic en el botón de cierre del mensaje
+document.querySelector('.btn--close-message-modal').addEventListener('click', closeMessageModal);
+
+
+  // Manejo del formulario de inicio de sesión
   loginForm.addEventListener('submit', function (event) {
     event.preventDefault();
     const email = loginForm.querySelector('input[name="email"]').value;
@@ -95,18 +115,13 @@ document.addEventListener('DOMContentLoaded', function () {
       const token = data.access_token;
       const userId = data.user_id;
       const message = data.message;
-    
-      console.log(message); // Imprime el mensaje de bienvenida
-      console.log(token); // Imprime el token de acceso
-      console.log(userId); // Imprime el ID del usuario
-    
+
       localStorage.setItem('token', token);
-      localStorage.setItem('userId', userId); // Almacenamos el ID del usuario
-    
+      localStorage.setItem('userId', userId); // Almacena el ID del usuario
+
       closeLoginModal();
       openMessageModal(message);
     })
-    
     .catch(error => {
       if (error.response) {
         openMessageModal('Error: ' + error.response.data.message);
@@ -114,40 +129,44 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Manejo del formulario de registro
   registerForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    const name = registerForm.querySelector('input[name="name"]').value;
-    const email = registerForm.querySelector('input[name="email"]').value;
-    const password = registerForm.querySelector('input[name="password"]').value;
-    const confirmPassword = registerForm.querySelector('input[name="password_confirmation"]').value;
+  event.preventDefault();
+  const name = registerForm.querySelector('input[name="name"]').value;
+  const email = registerForm.querySelector('input[name="email"]').value;
+  const password = registerForm.querySelector('input[name="password"]').value;
+  const confirmPassword = registerForm.querySelector('input[name="password_confirmation"]').value;
 
-    axios.post('/api/register', {
-      name: name,
-      email: email,
-      password: password,
-      password_confirmation: confirmPassword
-    })
-    .then(response => {
-      const token = response.data.access_token;
-      const userId = response.data.user.id;
+  axios.post('/api/register', {
+    name: name,
+    email: email,
+    password: password,
+    password_confirmation: confirmPassword
+  })
+  .then(response => {
+    const data = response.data;
+    const message = data.message;
 
-      localStorage.setItem('token', token);
-      localStorage.setItem('userId', userId);
+    localStorage.setItem('token', data.access_token);
+    localStorage.setItem('userId', data.data.id);
 
-      closeRegisterModal();
-      openMessageModal('Usuario registrado con éxito');
-    })
-    .catch(error => {
-      if (error.response) {
-        openMessageModal('Error: ' + JSON.stringify(error.response.data.errors));
-      }
-    });
+    closeRegisterModal();
+    openMessageModal(message);
+  })
+  .catch(error => {
+    if (error.response) {
+      openMessageModal('Error: ' + JSON.stringify(error.response.data.errors));
+    }
   });
+});
 
+
+  // Función para obtener el token almacenado
   function getToken() {
     return localStorage.getItem('token');
   }
 
+  // Interceptor de Axios para añadir el token a cada petición
   axios.interceptors.request.use(function (config) {
     const token = getToken();
     if (token) {
@@ -158,6 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return Promise.reject(error);
   });
 
+  // Manejo del botón de cierre de sesión
   if (logoutButton) {
     logoutButton.addEventListener('click', function (event) {
       event.preventDefault();
