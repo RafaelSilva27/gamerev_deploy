@@ -1,0 +1,19 @@
+/* Notas:
+1. .btn--admin es el estilo para el botón "Administracion" que tiene color de texto y borde púrpura, negrita, con bordes redondeados y una transición suave en color de fondo y texto.
+2. .btn--admin:hover es el estado de hover del botón "Administracion" que cambia el fondo a púrpura y el color del texto a blanco. */
+
+/* Estilos para el botón "Administracion" */
+.btn--admin {
+  color: #554c7c;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border: 2px solid #554c7c;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn--admin:hover {
+  background-color: #554c7c;
+  color: #fff;
+}

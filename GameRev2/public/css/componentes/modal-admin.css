@@ -1,0 +1,156 @@
+/* Notas:
+1. .modal-admin es el contenedor del modal de administración que se centra en la pantalla y tiene un fondo amarillo claro.
+2. .btn--close-modal-admin es el botón de cierre del modal de administración que se coloca en la esquina superior derecha y no tiene borde ni fondo.
+3. .modal__header es el título del modal de administración que tiene un tamaño de fuente de 1.5rem y un margen inferior de 1.25rem.
+4. .modal__form es el formulario del modal de administración que se muestra como un contenedor flexible con elementos en una columna y centrados horizontalmente.
+5. label es la etiqueta del formulario que tiene un tamaño de fuente de 1rem, un margen superior de 0.625rem y se alinea a la izquierda.
+6. input[type="text"] y select son los campos de entrada de texto y select, respectivamente, del formulario dentro del modal de administración. Tienen un ancho del 100%, padding, borde y bordes redondeados.
+7. button[type="submit"] es el botón de envío del formulario que tiene un margen superior de 1.25rem, un padding de 0.625rem 1.25rem y una transición suave al cambiar el fondo.
+8. button[type="submit"]:hover es el estado de hover del botón de envío que cambia el fondo a un color marrón claro.
+9. .btn-borrar-videojuego y .btn-actualizar-videojuego son los estilos para los botones de borrar y actualizar en la sección de Videojuegos dentro del modal de administración.
+10. .btn-borrar-genero y .btn-actualizar-genero son los estilos para los botones de borrar y actualizar en la sección de Géneros dentro del modal de administración.
+11. Los botones de borrar y actualizar en ambas secciones tienen un margen superior, padding, transición suave en el cambio de fondo y texto, y cambian el fondo a un color marrón claro en estado de hover.
+12. .overlay-admin es el overlay oscuro que cubre el fondo cuando se muestra el modal de administración. Tiene una opacidad del 50% y un z-index alto para superponerse a otros elementos.
+13. .hidden se utiliza para ocultar el overlay cuando no se muestra el modal de administración.
+*/
+
+/* Estilos para el modal de administración */
+.modal-admin {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c8b738;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 25rem;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-admin .btn--close-modal-admin {
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem; 
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 3rem;
+}
+
+.modal-admin .modal__header {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.modal-admin .modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-admin label {
+  font-size: 1rem;
+  margin-top: 0.625rem;
+  display: block;
+  text-align: left;
+}
+
+.modal-admin input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Estilos para los select */
+.modal-admin select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
+.modal-admin select:focus {
+  outline: none;
+  border-color: #70671f;
+}
+
+.modal-admin button[type="submit"] {
+  margin-top: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  transition: background-color 0.3s ease;
+  color: #323232;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-admin button[type="submit"]:hover {
+  background-color: #70671f; 
+  color: #fff;
+}
+
+/* Estilos para los botones de actualizar y borrar en la sección de Videojuegos */
+.modal-admin .admin-section .btn-borrar-videojuego,
+.modal-admin .admin-section .btn-actualizar-videojuego {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  transition: background-color 0.3s ease;
+  color: #323232;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-admin .admin-section .btn-borrar-videojuego:hover,
+.modal-admin .admin-section .btn-actualizar-videojuego:hover {
+  background-color: #70671f; 
+  color: #fff;
+}
+
+/* Estilos para los botones de actualizar y borrar en la sección de Géneros */
+.modal-admin .admin-section .btn-borrar-genero,
+.modal-admin .admin-section .btn-actualizar-genero {
+  margin-top: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  transition: background-color 0.3s ease;
+  color: #323232;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-admin .admin-section .btn-borrar-genero:hover,
+.modal-admin .admin-section .btn-actualizar-genero:hover {
+  background-color: #70671f; 
+  color: #fff;
+}
+
+.overlay-admin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 999; 
+}
+
+.overlay-admin.hidden {
+  display: none; 
+}
